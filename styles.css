@@ -1,0 +1,44 @@
+:root {
+  --bg-color: #f0f4f8;
+  --text-defaul: #4a4a4a;
+  --text-title: #2c3e50;
+  --text-bright: #3DA5D9;
+  --liner-gradien: linear-gradient(to right, #3DA5D9 0, #73BFB8 51%, #3DA5D9 100%);
+}
+
+.dark-theme {
+  --bg-color: #1e272e;
+  --text-defaul: #d1d8e0;
+  --text-title: #f5f6fa;
+  --text-bright: #3DA5D9;
+  --liner-gradien: linear-gradient(to right, #3DA5D9 0%, #73BFB8 51%, #3DA5D9 100%);
+  /* Same gradient */
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  background: var(--bg-color);
+}
+
+a{
+  text-decoration: none;
+  color: var(--text-title);
+}
+
+/* header */
+ 
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+.bar-icon{
+  display: none;
+}
