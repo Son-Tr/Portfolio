@@ -9,11 +9,43 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    @include font-family("Open Sans", sans-serif)
+    scroll-behavior: smooth;
 }
 
 a {
     text-decoration: none;
     color: $clr-dark-blue;
     cursor: pointer;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+/* ------------ container ----------- */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 1rem;
+    margin: 0 auto;
+
+    //reponsive for container
+    @include responsive-max(1200px) {
+        max-width: 1000px;
+    }
+
+    @include responsive-max(992px) {
+        max-width: 720px;
+    }
+
+    @include responsive-max(768px) {
+        max-width: 95%;
+    }
+
+    @include responsive-max(576px) {
+        max-width: 90%;
+
+    }
+
 }

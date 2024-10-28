@@ -1,2 +1,55 @@
 @import '../../styles/mixins';
 @import '../../styles/variables';
+
+.banner {
+    overflow: hidden;
+    height: 150vh;
+    width: 100%;
+
+    .wrap {
+        position: relative;
+        @include font-family('Mali', cursive);
+
+        /* ------------ mountain ------------ */
+        .mountain {
+            position: absolute;
+            top: 0;
+        }
+
+        /* ------------ greeting ------------ */
+        .greeting {
+            z-index: 1;
+            font-size: 5rem;
+            font-weight: 500;
+            color: $clr-very-light-gray;
+
+            position: absolute;
+            top: 50px;
+            left: 550px;
+
+            @include fade-down(0.5s, linear, 0.1s)
+        }
+
+        /* -------------- lake -------------- */
+        .lake {
+            position: absolute;
+            top: 0;
+            z-index: 2;
+        }
+
+        /* ------------ introduce ----------- */
+        .introduce {
+            z-index: 4;
+            font-size: 3.125rem;
+            font-weight: 400;
+            font-style: italic;
+            color: $clr-very-light-gray;
+
+            position: absolute;
+            top: 470px;
+            right: 170px;
+
+            @include fade-up(0.7s, linear, 0s)
+        }
+    }
+}

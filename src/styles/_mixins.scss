@@ -1,4 +1,4 @@
-/* ---------------------------------- flex ---------------------------------- */
+/* -------------- flex -------------- */
 @mixin flex ($content, $align, $direction) {
     display: flex;
     justify-content: $content;
@@ -6,7 +6,7 @@
     flex-direction: $direction;
 }
 
-/* ---------------------------------- grid ---------------------------------- */
+/* -------------- grid -------------- */
 @mixin grid-column($column, $size) {
     display: grid;
     justify-content: center;
@@ -18,7 +18,7 @@
     grid-template-rows: repeat($row, $size)
 }
 
-/* ------------------------------- responsive ------------------------------- */
+/* ----------- responsive ----------- */
 @mixin responsive-min($breakpoint) {
     @media (min-width: $breakpoint) {
         @content;
@@ -31,7 +31,63 @@
     }
 }
 
-/* ------------------------------- font-family ------------------------------ */
+/* ----------- font-family ---------- */
+
 @mixin font-family($f1, $f2) {
     font-family: $f1, $f2;
+}
+
+/* ------------ animation ----------- */
+
+//fade-down
+@keyframes fade-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@mixin fade-down($duration: 0.5s, $timing-function: ease, $delay: 0s) {
+    animation: fade-down $duration $timing-function $delay forwards;
+}
+
+//fade-up
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(150px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@mixin fade-up($duration: 0.5s, $timing-function: ease, $delay: 0s) {
+    animation: fade-up $duration $timing-function $delay forwards;
+}
+
+//pop-up
+@keyframes pop-up {
+    0% {
+        display: none;
+        opacity: 0;
+        scale: 0.5;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@mixin pop-up($duration: 0.5s, $timing-function: ease, $delay: 0s) {
+    animation: pop-up $duration $timing-function $delay forwards;
 }

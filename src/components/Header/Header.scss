@@ -1,2 +1,48 @@
 @import '../../styles/mixins';
 @import '../../styles/variables';
+
+.nav-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 4;
+
+    font-weight: 600;
+    font-size: 1.125rem;
+    @include flex(center, center, row);
+    @include font-family('Archivo', sans-serif);
+
+
+    //container
+    .container {
+        padding: 1rem 0;
+        @include flex(space-between, center, row);
+
+        // nav-link-logo
+        .nav-link-logo {
+            @include flex(center, center, row);
+            gap: .5rem;
+            color: $clr-dark-blue;
+
+            .icon-logo {
+                display: block;
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+
+        //nav
+        nav {
+            a {
+                margin-left: 3.5rem;
+                text-transform: uppercase;
+            }
+        }
+
+        //bars-icon
+        .bars-icon {
+            display: none;
+        }
+    }
+}
