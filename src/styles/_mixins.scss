@@ -1,0 +1,37 @@
+/* ---------------------------------- flex ---------------------------------- */
+@mixin flex ($content, $align, $direction) {
+    display: flex;
+    justify-content: $content;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+/* ---------------------------------- grid ---------------------------------- */
+@mixin grid-column($column, $size) {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat($column, $size)
+}
+
+@mixin grid-row($row, $size) {
+    display: grid;
+    grid-template-rows: repeat($row, $size)
+}
+
+/* ------------------------------- responsive ------------------------------- */
+@mixin responsive-min($breakpoint) {
+    @media (min-width: $breakpoint) {
+        @content;
+    }
+}
+
+@mixin responsive-max($breakpoint) {
+    @media (max-width: $breakpoint) {
+        @content;
+    }
+}
+
+/* ------------------------------- font-family ------------------------------ */
+@mixin font-family($f1, $f2) {
+    font-family: $f1, $f2;
+}
