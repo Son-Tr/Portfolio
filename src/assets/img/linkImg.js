@@ -3,4 +3,4 @@ import lake from './lake.png';
 import mountain from './mountain.jpg';
 
 
-export { logo, lake, mountain }
+export { logo, lake, mountain }  

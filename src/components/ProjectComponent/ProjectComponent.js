@@ -1,30 +1,31 @@
 import React, { useState } from 'react'
 import './ProjectComponent.scss'
 import { useDispatch, useSelector } from 'react-redux'
-import { random1 } from '../../assets/img/linkImg'
+
+import ListProject from './ListProject'
+import DetailProject from './DetailProject'
+import { selectItem } from '../../toolkit/slider/projectSlice'
 
 
 const ProjectComponent = () => {
     const dispatch = useDispatch();
     const listProject = useSelector((state) => state.projectSlice.project);
-    const item = useSelector((state) => state.projectSlice.selectItem);
+    const selectProject = useSelector((state) => state.projectSlice.selectItem);
 
-    const [selectItem, setSelectItem] = useState(item)
+    const onClickItem = (id) => {
+        dispatch(selectItem(id));
+    }
+
+    const clickGetBack = () => {
+        dispatch(selectItem(null));
+    }
     return (
         <div>
             {
-                !selectItem ?
-
-                    listProject.map((item) => (
-                        <div key={item.id}>
-                            <h1>
-                                {item.content}
-                            </h1>
-                            <img src={item.img[0]} alt="" />
-                        </div>
-                    ))
+                !selectProject ?
+                    <ListProject listProject={listProject} onClickItem={onClickItem} />
                     :
-                    <div></div>
+                    <DetailProject item={selectProject} clickGetBack={clickGetBack} />
             }
         </div>
     )

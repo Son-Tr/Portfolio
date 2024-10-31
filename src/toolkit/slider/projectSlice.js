@@ -93,7 +93,7 @@ const initialState = {
             skils: "HTML, CSS, responsive design, and appling libaries",
             img:
                 [
-                    "https://i.imgur.com/Q7NIMzr.png",
+                    "https://imgur.com/uNHzbic",
                     "https://i.imgur.com/jGE0bNL.png"
                 ],
             linkGithub: "https://github.com/Son-Tr/Meipaly",
@@ -123,7 +123,7 @@ const projectSlice = createSlice({
     initialState,
     reducers: {
         selectItem: (state, action) => {
-            state.selectItem = state.project.find((item) => item.id === state.payload)
+            state.selectItem = state.project.find((item) => item.id === action.payload)
         }
     }
 });
