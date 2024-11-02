@@ -37,9 +37,29 @@
                 @include font-family('Archivo', sans-serif);
             }
 
-            .wrap-btn {
-                @include flex(space-between, center, row);
+        }
+    }
+
+    /* --------- detail-project --------- */
+    .detail-project {
+        gap: 2rem;
+        @include flex(center, center, row);
+
+        .list-img {
+            width: 50%;
+
+            img {
+                // cursor: grab;
             }
         }
+
+        .content {
+            width: 50%;
+        }
+    }
+
+    /* ------------ wrap-btn ------------ */
+    .wrap-btn {
+        @include flex(space-between, center, row);
     }
 }

@@ -59,7 +59,6 @@ img {
 }
 
 /* ------------- button ------------- */
-
 .button {
     background-color: #d5dee6; // Using your specified background color
     border-radius: 100px;
@@ -83,16 +82,31 @@ img {
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-}
 
-.button:hover {
-    background-color: #bcc5ce; // Darker shade of the background color for hover effect
-    box-shadow:
-        rgba(0, 0, 0, 0.2) 0 -25px 18px -14px inset, // Darker shadow for emphasis
-        rgba(0, 0, 0, 0.15) 0 1px 2px,
-        rgba(0, 0, 0, 0.15) 0 2px 4px,
-        rgba(0, 0, 0, 0.15) 0 4px 8px,
-        rgba(0, 0, 0, 0.15) 0 8px 16px,
-        rgba(0, 0, 0, 0.15) 0 16px 32px;
-    transform: scale(1.05) rotate(-1deg);
+    //hover
+    &:hover {
+        background-color: #bcc5ce; // Darker shade of the background color for hover effect
+        box-shadow:
+            rgba(0, 0, 0, 0.2) 0 -25px 18px -14px inset, // Darker shadow for emphasis
+            rgba(0, 0, 0, 0.15) 0 1px 2px,
+            rgba(0, 0, 0, 0.15) 0 2px 4px,
+            rgba(0, 0, 0, 0.15) 0 4px 8px,
+            rgba(0, 0, 0, 0.15) 0 8px 16px,
+            rgba(0, 0, 0, 0.15) 0 16px 32px;
+        transform: scale(1.05) rotate(-1deg);
+    }
+
+    //active
+    &:active {
+        background-color: #a6b1ba; // Even darker shade for active state
+        box-shadow:
+            rgba(0, 0, 0, 0.3) 0 -25px 18px -14px inset, // More pronounced shadow
+            rgba(0, 0, 0, 0.2) 0 1px 2px,
+            rgba(0, 0, 0, 0.2) 0 2px 4px,
+            rgba(0, 0, 0, 0.2) 0 4px 8px,
+            rgba(0, 0, 0, 0.2) 0 8px 16px,
+            rgba(0, 0, 0, 0.2) 0 16px 32px;
+        transform: scale(0.98); // Slightly shrink the button when clicked
+    }
+
 }
