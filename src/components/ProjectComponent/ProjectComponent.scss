@@ -1,2 +1,43 @@
 @import '../../styles/mixins';
 @import '../../styles/variables';
+
+#project {
+    padding: 2rem;
+    background-color: #d5dee6;
+
+
+    /* ---------- list-project ---------- */
+    .list-project {
+        gap: 2rem;
+        @include grid-column(3, 1fr);
+
+        /* ----------- projet-card ---------- */
+        .project-card {
+            padding: 1rem;
+            border-radius: 5px;
+            background-color: white;
+            box-shadow: 0 5px 15px #0000001a;
+            transition: all .3s ease-in-out;
+
+            //hover project-card
+            &:hover {
+                box-shadow: 0 10px 10px #0000001a;
+                transform: translateY(-10px);
+            }
+
+            .img-project {
+                height: 180px;
+                cursor: pointer;
+                border: 1px solid $clr-border;
+            }
+
+            .name-project {
+                margin: 0.5rem 0;
+            }
+
+            .wrap-btn {
+                @include flex(space-between, center, row);
+            }
+        }
+    }
+}

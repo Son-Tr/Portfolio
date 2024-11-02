@@ -93,7 +93,7 @@ const initialState = {
             skils: "HTML, CSS, responsive design, and appling libaries",
             img:
                 [
-                    "https://imgur.com/uNHzbic",
+                    "https://i.imgur.com/uNHzbic.png",
                     "https://i.imgur.com/jGE0bNL.png"
                 ],
             linkGithub: "https://github.com/Son-Tr/Meipaly",

@@ -20,13 +20,16 @@ const ProjectComponent = () => {
         dispatch(selectItem(null));
     }
     return (
-        <div>
-            {
-                !selectProject ?
-                    <ListProject listProject={listProject} onClickItem={onClickItem} />
-                    :
-                    <DetailProject item={selectProject} clickGetBack={clickGetBack} />
-            }
+        <div id='project'>
+            <div className="container">
+                <h2 className='title'>Projects</h2>
+                {
+                    !selectProject ?
+                        <ListProject listProject={listProject} onClickItem={onClickItem} />
+                        :
+                        <DetailProject item={selectProject} clickGetBack={clickGetBack} />
+                }
+            </div>
         </div>
     )
 }
