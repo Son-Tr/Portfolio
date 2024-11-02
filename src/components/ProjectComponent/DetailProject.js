@@ -5,7 +5,7 @@ const DetailProject = ({ item, clickGetBack }) => {
     return (
         <div>
             <h1>{item.name}</h1>
-            <button onClick={clickGetBack}>back to project</button>
+            <button className='button' onClick={clickGetBack}>back to project</button>
         </div>
     )
 }

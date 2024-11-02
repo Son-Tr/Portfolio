@@ -4,7 +4,7 @@
 #project {
     padding: 2rem;
     background-color: #d5dee6;
-
+    @include font-family('Open Sans', sans-serif);
 
     /* ---------- list-project ---------- */
     .list-project {
@@ -14,7 +14,7 @@
         /* ----------- projet-card ---------- */
         .project-card {
             padding: 1rem;
-            border-radius: 5px;
+            border-radius: 8px;
             background-color: white;
             box-shadow: 0 5px 15px #0000001a;
             transition: all .3s ease-in-out;
@@ -28,11 +28,13 @@
             .img-project {
                 height: 180px;
                 cursor: pointer;
+                border-radius: 8px;
                 border: 1px solid $clr-border;
             }
 
             .name-project {
                 margin: 0.5rem 0;
+                @include font-family('Archivo', sans-serif);
             }
 
             .wrap-btn {

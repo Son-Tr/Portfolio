@@ -12,10 +12,13 @@ const ListProject = ({ listProject, onClickItem }) => {
                         {item.name}
                     </h3>
                     <div className="wrap-btn">
-                        <a href={item.linkWeb} target='_blank'>
-                            <button className='button'>Site</button>
+                        <a className='button' href={item.linkWeb} target='_blank'>
+                            Demo
                         </a>
-                        <button className='button' onClick={() => onClickItem(item.id)}>Read more</button>
+                        <button className='button'
+                            onClick={() => onClickItem(item.id)}>
+                            Read more
+                        </button>
                     </div>
                 </div>
             ))}
