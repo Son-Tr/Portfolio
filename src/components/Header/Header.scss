@@ -7,23 +7,24 @@
     left: 0;
     right: 0;
     z-index: 4;
-
+    height: 60px;
     font-weight: 600;
     font-size: 1.125rem;
+    @include transition-ease-in-out;
     @include flex(center, center, row);
     @include font-family('Archivo', sans-serif);
 
-
-    //container
+    /* ------------ container ----------- */
     .container {
         padding: 1rem 0;
-        @include flex(space-between, center, row);
+        @include flex(flex-end, center, row);
 
-        // nav-link-logo
+        /* ---------- nav-link-logo --------- */
         .nav-link-logo {
-            @include flex(center, center, row);
+            display: none;
             gap: .5rem;
-            color: $clr-dark-blue;
+            color: $clr-black;
+            @include transition-ease-in-out;
 
             .icon-logo {
                 display: block;
@@ -32,17 +33,63 @@
             }
         }
 
-        //nav
+        /* --------------- nav -------------- */
         nav {
-            a {
+            .nav-link {
                 margin-left: 3.5rem;
                 text-transform: uppercase;
+                position: relative;
+                @include transition-ease;
+
+                //hover
+                &:hover {
+                    color: $clr-pink;
+
+                    &::before {
+                        width: 100%;
+                    }
+                }
+
+                //:: before
+                &::before {
+                    content: "";
+                    left: 0;
+                    bottom: -5px;
+                    position: absolute;
+                    width: 0;
+                    height: 1px;
+                    background: $clr-pink;
+                    @include transition-ease-in-out-3;
+                }
             }
+
         }
 
-        //bars-icon
+        /* ------------ bars-icon ----------- */
         .bars-icon {
             display: none;
+        }
+    }
+
+    /* ---------------  -------------- */
+    /* ------------ nav-fixed ----------- */
+    /* ---------------  --------------- */
+    &.nav-fixed {
+        height: 75px;
+        z-index: 5;
+        background: $clr-bg;
+        @include transition-ease-in-out;
+        box-shadow: 0 3px 6px 0 #0000000d;
+
+        .container {
+            @include flex(space-between, center, row);
+
+            .nav-link-logo {
+                display: block;
+                @include transition-ease-in-out;
+                @include flex(center, center, row);
+                @include pop-up(0.3s, linear, 0s)
+            }
         }
     }
 }

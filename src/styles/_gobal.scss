@@ -14,7 +14,7 @@
 
 a {
     text-decoration: none;
-    color: $clr-dark-blue;
+    color: $clr-black;
     cursor: pointer;
 }
 
@@ -54,8 +54,9 @@ img {
 .title {
     font-size: 2.8rem;
     text-align: center;
-    @include font-family('Archivo', sans-serif);
     margin: 0 0 1.5rem;
+    text-transform: uppercase;
+    @include font-family('Archivo', sans-serif);
 }
 
 /* ------------- button ------------- */
@@ -148,32 +149,34 @@ img {
     outline: none;
     position: relative;
     overflow: hidden;
-}
 
-.button-back:hover {
-    transform: translateY(-5px);
-    color: $clr-very-light-gray;
-    box-shadow: 0 15px 25px rgba(255, 60, 130, 0.4);
-    background: linear-gradient(135deg, $clr-pink, $clr-orange);
-}
+    /* -------------- hover ------------- */
+    &:hover {
+        transform: translateY(-5px);
+        color: $clr-very-light-gray;
+        box-shadow: 0 15px 25px rgba(255, 60, 130, 0.4);
+        background: linear-gradient(135deg, $clr-pink, $clr-orange);
 
-.button-back:active {
-    transform: translateY(0);
-    /* Return to original position on click */
-    box-shadow: 0 5px 10px rgba(255, 60, 130, 0.3);
-}
+        &::before {
+            transform: translateX(-5px);
+            /* Slide the icon slightly left on hover */
+        }
+    }
 
-/* Icon style */
-.button-back::before {
-    content: '←';
-    /* Unicode arrow symbol */
-    font-size: 18px;
-    margin-right: 8px;
-    /* Space between icon and text */
-    transition: transform 0.4s linear;
-}
+    /* ------------- active ------------- */
+    &:active {
+        transform: translateY(0);
+        /* Return to original position on click */
+        box-shadow: 0 5px 10px rgba(255, 60, 130, 0.3);
+    }
 
-.button-back:hover::before {
-    transform: translateX(-5px);
-    /* Slide the icon slightly left on hover */
+    /* ------------- Icon style ------------- */
+    &::before {
+        content: '←';
+        /* Unicode arrow symbol */
+        font-size: 18px;
+        margin-right: 8px;
+        /* Space between icon and text */
+        transition: transform 0.4s linear;
+    }
 }

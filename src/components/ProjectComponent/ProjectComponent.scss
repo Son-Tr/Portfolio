@@ -2,7 +2,7 @@
 @import '../../styles/variables';
 
 #project {
-    padding: 2rem;
+    padding: 5rem 0 0;
     background-color: #d5dee6;
     @include font-family('Open Sans', sans-serif);
 
@@ -15,7 +15,7 @@
         .project-card {
             padding: 1rem;
             border-radius: 8px;
-            background-color: white;
+            background-color: $clr-white;
             box-shadow: 0 5px 15px #0000001a;
             transition: all .3s ease-in-out;
 
