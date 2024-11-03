@@ -11,6 +11,10 @@ const ListProject = ({ listProject, onClickItem }) => {
                     <h3 className='name-project'>
                         {item.name}
                     </h3>
+
+                    <p className="skills">
+                        <span>Skills:</span> {item.skills}
+                    </p>
                     <div className="wrap-btn">
                         <a className='button' href={item.linkWeb} target='_blank'>
                             Demo

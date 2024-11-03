@@ -37,29 +37,49 @@
                 @include font-family('Archivo', sans-serif);
             }
 
+
+
         }
     }
 
     /* --------- detail-project --------- */
     .detail-project {
         gap: 2rem;
-        @include flex(center, center, row);
+        @include flex(center, flex-start, row);
 
-        .list-img {
+        .list-img-part {
             width: 50%;
 
             img {
-                // cursor: grab;
+                border-radius: 8px;
+                border: 1px solid $clr-border;
             }
         }
 
-        .content {
+        .content-part {
             width: 50%;
+
+            .content {
+                text-align: justify;
+                margin: 0.5rem 0;
+            }
         }
     }
 
     /* ------------ wrap-btn ------------ */
     .wrap-btn {
+        margin-top: 0.5rem;
         @include flex(space-between, center, row);
+    }
+
+    /* ------------- skills ------------- */
+    .skills {
+        span {
+            font-weight: 500;
+            @include font-family('Archivo', sans-serif);
+
+        }
+
+        margin: 0.5rem 0;
     }
 }

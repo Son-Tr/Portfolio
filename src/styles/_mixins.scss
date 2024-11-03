@@ -91,3 +91,21 @@
 @mixin pop-up($duration: 0.5s, $timing-function: ease, $delay: 0s) {
     animation: pop-up $duration $timing-function $delay forwards;
 }
+
+/* ----------- transition ----------- */
+//transition
+@mixin transition-ease {
+    transition: all 0.3s ease;
+}
+
+@mixin transition-ease-in {
+    transition: all 0.3s ease-in;
+}
+
+@mixin transition-ease-in-out-3 {
+    transition: all 0.3s ease-in-out;
+}
+
+@mixin transition-ease-in-out {
+    transition: all 0.8s ease-in-out;
+}

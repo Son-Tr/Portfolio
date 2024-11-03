@@ -16,17 +16,35 @@ import "swiper/css/effect-fade";
 const DetailProject = ({ item, clickGetBack }) => {
     return (
         <div className='detail-project'>
-            <div className="list-img">
+            <div className="content-part">
+                <button className='button-back' onClick={clickGetBack}>
+                    Back to projects
+                </button>
+                <h1>{item.name}</h1>
+                <p className="content">
+                    {item.content}
+                </p>
+                <p className="skills">
+                    <span>Skills:</span> {item.skills}
+                </p>
+
+                <div className="wrap-btn">
+                    <a href={item.linkWeb} className="button" target='_blank'>Demo</a>
+                    <a href={item.linkGithub} className="button" target='_blank'>Code</a>
+                </div>
+            </div>
+            <div className="list-img-part">
                 <Swiper
                     style={{
                         '--swiper-pagination-color': 'hsl(23, 100%, 75%)',
                     }}
+                    speed={600}
                     loop={true}
                     spaceBetween={30}
                     effect={"fade"}
                     slidesPerView={1}
                     autoplay={{
-                        delay: 3000,
+                        delay: 2500,
                         disableOnInteraction: true,
                     }}
 
@@ -41,15 +59,8 @@ const DetailProject = ({ item, clickGetBack }) => {
                         </SwiperSlide>
                     ))}
                 </Swiper>
-                <div className="wrap-btn">
-                    <a href={item.linkWeb} className="button" target='_blank'>Demo</a>
-                    <a href={item.linkGithub} className="button" target='_blank'>Code</a>
-                </div>
             </div>
-            <div className="content">
-                <h1>{item.name}</h1>
-                <button className='button' onClick={clickGetBack}>back to project</button>
-            </div>
+
         </div>
     )
 }
