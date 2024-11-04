@@ -26,11 +26,15 @@ img {
 /* ------------ container ----------- */
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1250px;
     padding: 0 1rem;
     margin: 0 auto;
 
     //reponsive for container
+    @include responsive-max(1300px) {
+        max-width: 1100px;
+    }
+
     @include responsive-max(1200px) {
         max-width: 1000px;
     }

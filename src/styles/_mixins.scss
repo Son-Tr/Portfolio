@@ -92,6 +92,40 @@
     animation: pop-up $duration $timing-function $delay forwards;
 }
 
+@keyframes rotate {
+    0% {
+
+        opacity: 0;
+        transform: rotate(-180deg);
+    }
+
+    100% {
+
+        opacity: 1;
+        scale: rotate(0deg);
+    }
+}
+
+@keyframes rotate-reverse {
+    0% {
+
+        opacity: 0;
+        transform: rotate(180deg);
+    }
+
+    100% {
+
+        opacity: 1;
+        scale: rotate(0deg);
+    }
+}
+
+@mixin rotate($type: rotate, $duration: 0.5s, $timing-function: ease, $delay: 0s) {
+    animation: $type $duration $timing-function $delay forwards;
+}
+
+
+
 /* ----------- transition ----------- */
 //transition
 @mixin transition-ease {

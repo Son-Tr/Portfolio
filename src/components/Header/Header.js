@@ -4,15 +4,16 @@ import { logo } from '../../assets/img/linkImg';
 import resume from '../../assets/resume/Son-Tran-Resume.pdf'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
-import Banner from '../Banner/Banner';
+
 
 
 const Header = () => {
-    const [isMenu, setIsMenu] = useState(false);
+    const [isNavBar, setNavBar] = useState(false);
 
+    // handle when user scroll bar, display and hidden header-fixed
     useEffect(() => {
         const handleScroll = () => {
-            document.querySelector(".nav-header").classList.toggle("nav-fixed", window.scrollY > 150)
+            document.querySelector(".nav-header").classList.toggle("nav-fixed", window.scrollY > 100)
         }
 
         window.addEventListener("scroll", handleScroll)
@@ -21,7 +22,32 @@ const Header = () => {
         }
     }, [])
 
+    // close navbar when user click option on this
+    useEffect(() => {
+        let navLinks = document.querySelectorAll(".nav-link")
 
+        navLinks.forEach((navLink) => {
+            navLink.addEventListener("click", () => {
+                setNavBar(false)
+            })
+        })
+        return () => {
+            navLinks.forEach((navLink) => {
+                navLink.removeEventListener("click", () => {
+                    setNavBar(false)
+                })
+            })
+        }
+    }, [])
+
+    /* --- handle open and close navBar --- */
+    const onClickNavBar = () => {
+        setNavBar(!isNavBar)
+    }
+    /* close navBar when user click on over-play */
+    const onClickOverPlay = () => {
+        setNavBar(false)
+    }
     return (
         <>
             <div className="nav-header">
@@ -31,17 +57,19 @@ const Header = () => {
                         <span className="logo">SonTr</span>
                     </a>
 
-                    <nav className={isMenu ? "show" : ""}>
+                    <nav className={isNavBar ? "show" : ""}>
                         <a className="nav-link" href='#project' rel="noopener noreferrer">Project</a>
                         <a className="nav-link" href='/' rel="noopener noreferrer">About</a>
                         <a className="nav-link" href='/' rel="noopener noreferrer">Contact</a>
                         <a className="nav-link" href={resume} target="_blank" rel="noopener noreferrer">Resume</a>
                     </nav>
-                    <span className="bars-icon">
-                        {!isMenu ? <FontAwesomeIcon icon={faBars} /> : <FontAwesomeIcon icon={faX} />}
+                    <span className="bars-icon" onClick={onClickNavBar}>
+                        {!isNavBar ? <FontAwesomeIcon icon={faBars} /> : <FontAwesomeIcon icon={faX} />}
                     </span>
                 </header>
-            </div>
+                <div className={`over-play ${isNavBar ? "show" : ""}`} onClick={onClickOverPlay}
+                ></div>
+            </div >
         </>
     )
 }
