@@ -11,6 +11,11 @@
         gap: 2rem;
         @include grid-column(3, 1fr);
 
+        /* ---- list-project responsive ---- */
+        @include responsive-max(992px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
         /* ----------- projet-card ---------- */
         .project-card {
             padding: 1rem;
@@ -18,6 +23,7 @@
             background-color: $clr-white;
             box-shadow: 0 5px 15px #0000001a;
             transition: all .3s ease-in-out;
+            @include flex(space-evenly, flex-start, column);
 
             //hover project-card
             &:hover {
@@ -68,6 +74,7 @@
 
     /* ------------ wrap-btn ------------ */
     .wrap-btn {
+        width: 100%;
         margin-top: 0.5rem;
         @include flex(space-between, center, row);
     }

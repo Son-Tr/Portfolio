@@ -36,7 +36,11 @@ img {
     }
 
     @include responsive-max(1200px) {
-        max-width: 1000px;
+        max-width: 992px;
+    }
+
+    @include responsive-max(1024px) {
+        max-width: 900px;
     }
 
     @include responsive-max(992px) {

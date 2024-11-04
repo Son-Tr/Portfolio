@@ -27,16 +27,20 @@
 
         /* ---------- nav-link-logo --------- */
         .nav-link-logo {
+            font-size: 1.5rem;
             display: none;
-            gap: .5rem;
             color: $clr-black;
             @include transition-ease-in-out;
+            @include font-family('Mali', cursive);
 
             /* --------- nav-link-logo responsive --------- */
             @include responsive-max(1200px) {
+                gap: .5rem;
                 display: block;
+                color: $clr-very-light-gray;
                 @include flex(center, center, row);
-                @include pop-up(0.3s, linear, 0s)
+                @include pop-up(0.3s, linear, 0s);
+
             }
 
             //icon-logo
@@ -149,10 +153,12 @@
             @include flex(space-between, center, row);
 
             .nav-link-logo {
+                color: $clr-black;
                 display: block;
                 @include transition-ease-in-out;
                 @include flex(center, center, row);
-                @include pop-up(0.3s, linear, 0s)
+                @include pop-up(0.3s, linear, 0s);
+
             }
         }
     }
