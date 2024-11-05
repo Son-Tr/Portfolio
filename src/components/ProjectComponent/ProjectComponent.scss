@@ -67,8 +67,20 @@
         gap: 2rem;
         @include flex(center, flex-start, row);
 
+        /* ---- detail-project responsive --- */
+        @include responsive-max(992px) {
+            @include flex(center, flex-start, column-reverse);
+            gap: 1.5rem;
+        }
+
+
         .list-img-part {
             width: 50%;
+
+            //responsive
+            @include responsive-max(992px) {
+                width: 100%;
+            }
 
             img {
                 border-radius: 8px;
@@ -78,6 +90,15 @@
 
         .content-part {
             width: 50%;
+
+            //responsive
+            @include responsive-max(992px) {
+                width: 100%;
+            }
+
+            h1 {
+                font-size: 1.75rem;
+            }
 
             .content {
                 text-align: justify;
@@ -89,7 +110,7 @@
     /* ------------ wrap-btn ------------ */
     .wrap-btn {
         width: 100%;
-        margin-top: 0.5rem;
+        margin-top: 0.75rem;
         @include flex(space-between, center, row);
     }
 

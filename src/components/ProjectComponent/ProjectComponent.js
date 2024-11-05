@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './ProjectComponent.scss'
 import { useDispatch, useSelector } from 'react-redux'
 
@@ -12,13 +12,27 @@ const ProjectComponent = () => {
     const listProject = useSelector((state) => state.projectSlice.project);
     const selectProject = useSelector((state) => state.projectSlice.selectItem);
 
+    const [position, setPosition] = useState(0)
+
     const onClickItem = (id) => {
+        setPosition(window.scrollY)//save position
         dispatch(selectItem(id));
     }
 
     const clickGetBack = () => {
         dispatch(selectItem(null));
     }
+
+    useEffect(() => {
+        if (!selectProject) {
+            window.scrollTo({
+                left: 0,
+                top: position,
+                behavior: "instant"
+            });
+        }
+    }, [selectProject, position])
+
     return (
         <div id='project'>
             <div className="container">

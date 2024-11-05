@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -14,12 +14,21 @@ import "swiper/css/effect-fade";
 
 
 const DetailProject = ({ item, clickGetBack }) => {
-    return (
+
+    //scroll to project component
+    useEffect(() => {
+        document.getElementById("project").scrollIntoView({
+            block: "start",
+            behavior: "instant",
+        });
+    }, [])
+
+    return (<>
+        <button className='button-back' onClick={clickGetBack}>
+            Back to projects
+        </button>
         <div className='detail-project'>
             <div className="content-part">
-                <button className='button-back' onClick={clickGetBack}>
-                    Back to projects
-                </button>
                 <h1>{item.name}</h1>
                 <p className="content">
                     {item.content}
@@ -29,8 +38,8 @@ const DetailProject = ({ item, clickGetBack }) => {
                 </p>
 
                 <div className="wrap-btn">
-                    <a href={item.linkWeb} className="button" target='_blank'>Demo</a>
-                    <a href={item.linkGithub} className="button" target='_blank'>Code</a>
+                    <a href={item.linkWeb} className="button" target='_blank' rel="noopener noreferrer">Demo</a>
+                    <a href={item.linkGithub} className="button" target='_blank' rel="noopener noreferrer">Code</a>
                 </div>
             </div>
             <div className="list-img-part">
@@ -54,7 +63,7 @@ const DetailProject = ({ item, clickGetBack }) => {
                     modules={[Autoplay, Pagination]}
                 >
                     {item.img.map((img, index) => (
-                        <SwiperSlide>
+                        <SwiperSlide key={index}>
                             <img src={img} alt={index} />
                         </SwiperSlide>
                     ))}
@@ -62,6 +71,7 @@ const DetailProject = ({ item, clickGetBack }) => {
             </div>
 
         </div>
+    </>
     )
 }
 
