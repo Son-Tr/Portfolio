@@ -3,8 +3,26 @@
 
 .banner {
     overflow: hidden;
-    height: 100vh;
+    height: 900px;
     width: 100%;
+
+    /* -------- banner responsive ------- */
+    @include responsive-max(1350px) {
+        height: 800px;
+    }
+
+    @include responsive-max(1200px) {
+        height: 680px;
+    }
+
+    @include responsive-max(1024px) {
+        height: 600px;
+    }
+
+    @include responsive-max(900px) {
+        height: 550px;
+    }
+
 
     .wrap {
         position: relative;
@@ -14,6 +32,14 @@
         .mountain {
             position: absolute;
             top: 0;
+
+        }
+
+        /* -------------- lake -------------- */
+        .lake {
+            position: absolute;
+            top: 0;
+            z-index: 2;
         }
 
         /* ------------ greeting ------------ */
@@ -27,14 +53,24 @@
             top: 50px;
             left: 550px;
 
-            @include fade-down(0.5s, linear, 0.1s)
-        }
+            @include fade-down(0.5s, linear, 0.1s);
 
-        /* -------------- lake -------------- */
-        .lake {
-            position: absolute;
-            top: 0;
-            z-index: 2;
+            /* ------- greeting responsive ------ */
+            @include responsive-max(1200px) {
+                left: 450px;
+                font-size: 4.5rem;
+            }
+
+            @include responsive-max(1100px) {
+                top: 40px;
+                left: 420px;
+                font-size: 4.25rem;
+            }
+
+            @include responsive-max(950px) {
+                top: 30px;
+                left: 350px;
+            }
         }
 
         /* ------------ introduce ----------- */
@@ -49,7 +85,25 @@
             top: 470px;
             right: 170px;
 
-            @include fade-up(0.7s, linear, 0s)
+            @include fade-up(0.7s, linear, 0s);
+
+            /* ------- introduce responsive ------ */
+            @include responsive-max(1200px) {
+                top: 420px;
+                right: 130px;
+                font-size: 3rem;
+            }
+
+            @include responsive-max(1100px) {
+                top: 380px;
+                right: 100px;
+                font-size: 2.75rem;
+            }
+
+            @include responsive-max(950px) {
+                top: 350px;
+                right: 60px;
+            }
         }
     }
 }

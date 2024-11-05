@@ -77,6 +77,18 @@
                 }
             }
 
+            @include responsive-max(992px) {
+                padding: 3.75rem 5rem 1rem 1rem;
+            }
+
+            @include responsive-max(768px) {
+                padding: 3.5rem 4.5rem 1rem 1rem;
+            }
+
+            @include responsive-max(576px) {
+                padding: 3rem 4rem 1rem 0.75rem;
+            }
+
 
             //nav-link
             .nav-link {
@@ -127,6 +139,14 @@
 
                 svg {
                     height: 1.5rem;
+                    width: 1.5rem;
+
+                    //responsive 
+                    @include responsive-max(576px) {
+                        height: 1.25rem;
+                        width: 1.25rem;
+                    }
+
 
                     &[data-icon="bars"] {
                         @include rotate(rotate-reverse);
@@ -174,8 +194,11 @@
         @include transition-ease-in-out;
 
         &.show {
-            background: #1d2a37b3;
-            height: 100vh;
+            @include responsive-max(1200px) {
+
+                background: #1d2a37b3;
+                height: 100vh;
+            }
         }
     }
 }

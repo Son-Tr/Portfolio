@@ -16,6 +16,11 @@
             grid-template-columns: repeat(2, 1fr);
         }
 
+        @include responsive-max(576px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+
         /* ----------- projet-card ---------- */
         .project-card {
             padding: 1rem;

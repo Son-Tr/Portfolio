@@ -36,18 +36,6 @@ img {
     }
 
     @include responsive-max(1200px) {
-        max-width: 992px;
-    }
-
-    @include responsive-max(1024px) {
-        max-width: 900px;
-    }
-
-    @include responsive-max(992px) {
-        max-width: 720px;
-    }
-
-    @include responsive-max(768px) {
         max-width: 95%;
     }
 
@@ -55,6 +43,23 @@ img {
         max-width: 90%;
 
     }
+
+    // @include responsive-max(1024px) {
+    //     max-width: 900px;
+    // }
+
+    // @include responsive-max(992px) {
+    //     max-width: 820px;
+    // }
+
+    // @include responsive-max(820px) {
+    //     max-width: 95%;
+    // }
+
+    // @include responsive-max(768px) {
+    //     max-width: 95%;
+    // }
+
 
 }
 

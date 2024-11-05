@@ -13,7 +13,17 @@ const Header = () => {
     // handle when user scroll bar, display and hidden header-fixed
     useEffect(() => {
         const handleScroll = () => {
-            document.querySelector(".nav-header").classList.toggle("nav-fixed", window.scrollY > 100)
+            let nav = document.querySelector(".nav-header");
+            let banner = document.querySelector(".banner");
+            let heightBanner = parseInt(getComputedStyle(banner).height);
+            if (window.scrollY <= (heightBanner * 1 / 3)) {
+                nav.classList.remove("nav-fixed")
+            } else {
+                if (window.scrollY > (heightBanner * 1 / 3)) {
+                    nav.classList.add("nav-fixed")
+                }
+            }
+
         }
 
         window.addEventListener("scroll", handleScroll)
