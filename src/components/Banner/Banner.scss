@@ -20,7 +20,27 @@
     }
 
     @include responsive-max(900px) {
-        height: 550px;
+        height: 500px;
+    }
+
+    @include responsive-max(750px) {
+        height: 420px;
+    }
+
+    @include responsive-max(679px) {
+        height: 380px;
+    }
+
+    @include responsive-max(576px) {
+        height: 320px;
+    }
+
+    @include responsive-max(480px) {
+        height: 275px;
+    }
+
+    @include responsive-max(415px) {
+        height: 240px;
     }
 
 
@@ -67,10 +87,51 @@
                 font-size: 4.25rem;
             }
 
+            @include responsive-max(1024px) {
+                top: 45px;
+                left: 395px;
+                font-size: 4.25rem;
+            }
+
             @include responsive-max(950px) {
                 top: 30px;
-                left: 350px;
+                left: 360px;
             }
+
+            @include responsive-max(900px) {
+                top: 15px;
+                left: 310px;
+                font-size: 3.75rem;
+            }
+
+            @include responsive-max(679px) {
+                top: 15px;
+                left: 280px;
+                font-size: 3.5rem;
+            }
+
+            @include responsive-max(620px) {
+                top: 15px;
+                left: 240px;
+            }
+
+            @include responsive-max(576px) {
+                top: 15px;
+                left: 220px;
+                font-size: 2.75rem;
+            }
+
+            @include responsive-max(480px) {
+                left: 180px;
+                font-size: 2.25rem;
+            }
+
+            @include responsive-max(380px) {
+                top: 10px;
+                left: 145px;
+                font-size: 2rem;
+            }
+
         }
 
         /* ------------ introduce ----------- */
@@ -103,6 +164,46 @@
             @include responsive-max(950px) {
                 top: 350px;
                 right: 60px;
+            }
+
+            @include responsive-max(900px) {
+                top: 320px;
+                right: 80px;
+                font-size: 2.25rem;
+            }
+
+            @include responsive-max(768px) {
+                top: 300px;
+                right: 30px;
+                font-size: 2.25rem;
+            }
+
+            @include responsive-max(679px) {
+                top: 250px;
+                right: 20px;
+                font-size: 2rem;
+            }
+
+            @include responsive-max(620px) {
+                top: 250px;
+                right: 15px;
+            }
+
+            @include responsive-max(576px) {
+                top: 200px;
+                right: 20px;
+                font-size: 1.5rem;
+            }
+
+            @include responsive-max(480px) {
+                top: 160px;
+                font-size: 1.125rem;
+            }
+
+            @include responsive-max(380px) {
+                top: 140px;
+                right: 5px;
+                font-size: 1rem;
             }
         }
     }

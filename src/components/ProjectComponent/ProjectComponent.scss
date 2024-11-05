@@ -6,6 +6,15 @@
     background-color: #d5dee6;
     @include font-family('Open Sans', sans-serif);
 
+    /* ------- project responsive ------- */
+    @include responsive-max(768px) {
+        padding: 4rem 0 2rem;
+    }
+
+    @include responsive-max(576px) {
+        padding: 3.25rem 0 2rem;
+    }
+
     /* ---------- list-project ---------- */
     .list-project {
         gap: 2rem;

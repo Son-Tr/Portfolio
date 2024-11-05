@@ -67,9 +67,18 @@ img {
 .title {
     font-size: 2.8rem;
     text-align: center;
-    margin: 0 0 1.5rem;
+    margin-bottom: 1.5rem;
     text-transform: uppercase;
     @include font-family('Archivo', sans-serif);
+
+    @include responsive-max(768px) {
+        font-size: 2.5rem;
+    }
+
+    @include responsive-max(576px) {
+        font-size: 2rem;
+        margin-bottom: 1.125rem;
+    }
 }
 
 /* ------------- button ------------- */
