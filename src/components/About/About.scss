@@ -1,2 +1,67 @@
 @import '../../styles/mixins';
 @import '../../styles/variables';
+
+#about {
+
+    /* ---------- about-detail ---------- */
+    .about-detail {
+        padding-bottom: 1rem;
+        gap: 1rem;
+        @include flex(center, flex-start, row);
+
+        //responsive
+        @include responsive-max(767px) {
+            @include flex(center, center, column);
+        }
+
+        //img-hero
+        .img-hero {
+            border-radius: 8px;
+
+            //responsive
+            @include responsive-max(912px) {
+                width: 300px;
+            }
+
+            @include responsive-max(400px) {
+                width: 280px;
+            }
+        }
+
+        .content-part {
+
+            p {
+                text-align: justify;
+                margin-bottom: 1.5rem;
+
+                //responsive
+                @include responsive-max(1024px) {
+                    margin-bottom: 1rem;
+                }
+
+            }
+
+
+            // padding: 1rem 0;
+            .wrap-btn {
+                height: 50px;
+
+                .button-back {
+                    padding: 12px 20px;
+                    border: 1px solid;
+                    text-transform: capitalize;
+
+                    &:hover {
+                        border: none;
+                        transform: translateY(0);
+                    }
+
+                    &::before {
+                        content: "";
+                    }
+                }
+            }
+
+        }
+    }
+}

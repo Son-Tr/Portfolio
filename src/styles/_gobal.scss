@@ -23,6 +23,7 @@ img {
     width: 100%;
 }
 
+
 /* ------------ container ----------- */
 .container {
     width: 100%;
@@ -64,6 +65,13 @@ img {
     }
 }
 
+/* ------------ wrap-btn ------------ */
+.wrap-btn {
+    width: 100%;
+    margin-top: 0.75rem;
+    @include flex(space-between, center, row);
+}
+
 /* ------------- button ------------- */
 .button {
     background: #d5dee6;
@@ -100,33 +108,34 @@ img {
 
     //active
     &:active {
-        background-color: #a6b1ba; // Even darker shade for active state
+        background-color: #a6b1ba;
         box-shadow: 0 5px 10px rgba(255, 60, 130, 0.2);
-        transform: scale(0.98); // Slightly shrink the button when clicked
+        transform: scale(0.98);
     }
 
 }
 
 .button-back {
+
     display: inline-flex;
     align-items: center;
     justify-content: center;
     padding: 12px 16px;
     font-size: 16px;
     font-weight: bold;
+    @include font-family("Archivo", sans-serif);
 
     background: #d5dee6;
     color: #1b2a40;
-    /* Beautiful gradient */
+
     border: none;
     border-radius: 30px;
-    /* More rounded for a pill shape */
+
     cursor: pointer;
     text-transform: uppercase;
     text-decoration: none;
     transition: all 0.3s ease-in-out;
 
-    /* Removes the outline on focus */
     outline: none;
     position: relative;
     overflow: hidden;
@@ -138,26 +147,23 @@ img {
         box-shadow: 0 15px 25px rgba(255, 60, 130, 0.4);
         background: linear-gradient(135deg, $clr-pink, $clr-orange);
 
-        &::before {
-            transform: translateX(-5px);
-            /* Slide the icon slightly left on hover */
-        }
+        // &::before {
+        //     transform: translateX(-5px);
+
+        // }
     }
 
     /* ------------- active ------------- */
     &:active {
         transform: translateY(0);
-        /* Return to original position on click */
         box-shadow: 0 5px 10px rgba(255, 60, 130, 0.3);
     }
 
     /* ------------- Icon style ------------- */
     &::before {
         content: '←';
-        /* Unicode arrow symbol */
         font-size: 18px;
         margin-right: 8px;
-        /* Space between icon and text */
         transition: transform 0.4s linear;
     }
 }
@@ -177,7 +183,8 @@ img {
         padding: 3.25rem 0 2rem;
     }
 
-    &.dark {
-        background: $clr-bg;
-    }
+}
+
+.dark {
+    background: $clr-bg;
 }

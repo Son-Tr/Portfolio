@@ -1,6 +1,13 @@
 @import '../../styles/mixins';
 @import '../../styles/variables';
 
+// hidden body scroll ;
+.noscroll {
+    overflow: hidden;
+    height: 100vh;
+}
+
+
 .nav-header {
     position: fixed;
     top: 0;
@@ -138,6 +145,7 @@
         /* ------------ bars-icon ----------- */
         .bars-icon {
             display: none;
+            cursor: pointer;
 
             /* --------- bars-icon responsive --------- */
             @include responsive-max(1200px) {

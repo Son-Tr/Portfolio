@@ -34,11 +34,17 @@ const Header = () => {
 
     // close navbar when user click option on this
     useEffect(() => {
-        let navLinks = document.querySelectorAll(".nav-link")
+        //hidden body scroll
 
+        // close navbar when user click option on this
+        let navLinks = document.querySelectorAll(".nav-link")
         navLinks.forEach((navLink) => {
             navLink.addEventListener("click", () => {
                 setNavBar(false)
+                if (document.body.classList.contains("noscroll")) {
+                    document.body.classList.remove("noscroll");
+                }
+
             })
         })
         return () => {
@@ -53,10 +59,16 @@ const Header = () => {
     /* --- handle open and close navBar --- */
     const onClickNavBar = () => {
         setNavBar(!isNavBar)
+        document.body.classList.toggle('noscroll');// display body scroll which navbar is in active;
     }
     /* close navBar when user click on over-play */
     const onClickOverPlay = () => {
         setNavBar(false)
+        document.body.classList.toggle('noscroll')
+        //hidden body scroll
+        if (document.body.classList.contains("noscroll")) {
+            document.body.classList.remove("noscroll");
+        }
     }
     return (
         <>

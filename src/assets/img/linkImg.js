@@ -9,9 +9,8 @@ import REACT from './react.png';
 import GIT from './git.png';
 import FIGMA from './figma.png';
 import CSS3 from './css.png';
+import hero from './hero.jpg';
 
 
 
-
-
-export { logo, lake, mountain, BOOTSTRAP, HTML5, SASS, JAVASCRIPT, REACT, GIT, FIGMA, CSS3 }  
+export { logo, lake, mountain, BOOTSTRAP, HTML5, SASS, JAVASCRIPT, REACT, GIT, FIGMA, CSS3, hero }  

@@ -1,0 +1,14 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.footer {
+    font-size: 1rem;
+    padding: 1rem 0;
+    text-align: center;
+    @include font-family("Archivo", sans-serif);
+
+    a {
+        cursor: pointer;
+        @include transition-ease-in-out-3;
+    }
+}
