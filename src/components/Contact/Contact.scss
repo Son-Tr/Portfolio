@@ -26,7 +26,7 @@
         /* ----------- form-input ----------- */
         .form-input {
             margin: 0 auto;
-
+            width: 680px;
             gap: 1rem;
             @include grid-row(5, 1fr);
             align-items: center;
