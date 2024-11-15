@@ -1,2 +1,59 @@
 @import '../../styles/mixins';
 @import '../../styles/variables';
+
+#skills {
+    .list-icon {
+        gap: 3rem 0;
+        @include grid-column(4, 1fr);
+
+        /* ------ list-icon responsive ------ */
+        @include responsive-max(768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include responsive-max(540px) {
+            gap: 2rem 0;
+        }
+
+        .box-icon {
+            gap: 0.5rem;
+            @include flex(center, center, column);
+
+            //img-icon
+            .img-icon {
+                height: 100px;
+                width: 85px;
+            }
+
+            .name-icon {
+                font-size: 1.5rem;
+            }
+
+            &:nth-child(3) {
+                .img-icon {
+                    width: 127px;
+                }
+            }
+
+            &:nth-child(4),
+            &:nth-child(6),
+            &:nth-child(7) {
+                .img-icon {
+                    width: 96px;
+                }
+            }
+
+            &:nth-child(5) {
+                .img-icon {
+                    width: 106px;
+                }
+            }
+
+            &:nth-child(8) {
+                .img-icon {
+                    width: 70px;
+                }
+            }
+        }
+    }
+}

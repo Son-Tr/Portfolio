@@ -69,8 +69,8 @@ const Header = () => {
 
                     <nav className={isNavBar ? "show" : ""}>
                         <a className="nav-link" href='#project' rel="noopener noreferrer">Project</a>
-                        <a className="nav-link" href='/' rel="noopener noreferrer">About</a>
-                        <a className="nav-link" href='/' rel="noopener noreferrer">Contact</a>
+                        <a className="nav-link" href='#about' rel="noopener noreferrer">About Me</a>
+                        <a className="nav-link" href='#contact' rel="noopener noreferrer">Contact Me</a>
                         <a className="nav-link" href={resume} target="_blank" rel="noopener noreferrer">Resume</a>
                     </nav>
                     <span className="bars-icon" onClick={onClickNavBar}>

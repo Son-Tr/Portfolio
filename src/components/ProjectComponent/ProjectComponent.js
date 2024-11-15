@@ -34,7 +34,7 @@ const ProjectComponent = () => {
     }, [selectProject, position])
 
     return (
-        <div id='project'>
+        <div id='project' className='bg dark'>
             <div className="container">
                 <h2 className='title'>Projects</h2>
                 {

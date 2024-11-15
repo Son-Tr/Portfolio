@@ -2,18 +2,6 @@
 @import '../../styles/variables';
 
 #project {
-    padding: 5rem 0 2rem;
-    background-color: #d5dee6;
-    @include font-family('Open Sans', sans-serif);
-
-    /* ------- project responsive ------- */
-    @include responsive-max(768px) {
-        padding: 4rem 0 2rem;
-    }
-
-    @include responsive-max(576px) {
-        padding: 3.25rem 0 2rem;
-    }
 
     /* ---------- list-project ---------- */
     .list-project {
@@ -60,6 +48,10 @@
     }
 
     /* --------- detail-project --------- */
+    .button-back {
+        margin-bottom: 1rem;
+    }
+
     .detail-project {
         gap: 2rem;
         @include flex(center, flex-start, row);

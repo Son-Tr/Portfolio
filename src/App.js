@@ -1,8 +1,13 @@
+import './styles/main.scss'
+import About from './components/About/About';
 import Banner from './components/Banner/Banner';
 import Header from './components/Header/Header';
-import ProjectComponent from './components/ProjectComponent/ProjectComponent';
 import Skills from './components/Skills/Skills';
-import './styles/main.scss'
+
+import ProjectComponent from './components/ProjectComponent/ProjectComponent';
+import Contact from './components/Contact/Contact';
+
+
 
 function App() {
   return (
@@ -11,6 +16,9 @@ function App() {
       <Banner />
       <ProjectComponent />
       <Skills />
+      <About />
+      <Contact />
+
     </>
   );
 }
