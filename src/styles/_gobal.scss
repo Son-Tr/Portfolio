@@ -74,7 +74,7 @@ img {
 
 /* ------------- button ------------- */
 .button {
-    background: #d5dee6;
+    background-color: $clr-white;
     border-radius: 100px;
     box-shadow:
         rgba(0, 0, 0, 0.1) 0 -25px 18px -14px inset,
@@ -86,7 +86,8 @@ img {
     color: #1b2a40;
     cursor: pointer;
     display: inline-block;
-    // font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+    @include font-family("Archivo", sans-serif);
+    text-transform: capitalize;
     padding: 7px 20px;
     text-align: center;
     text-decoration: none;
@@ -175,7 +176,7 @@ img {
     @include font-family('Open Sans', sans-serif);
 
     /* ------- project responsive ------- */
-    @include responsive-max(768px) {
+    @include responsive-max(992px) {
         padding: 4rem 0 2rem;
     }
 

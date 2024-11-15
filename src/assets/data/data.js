@@ -37,3 +37,21 @@ export const listSkill = [
     },
 
 ]
+
+export const input = [
+    {
+        type: "text",
+        placeholder: "Name",
+        name: "name"
+    },
+    {
+        type: "number",
+        placeholder: "Your Phone Number",
+        name: "phone"
+    },
+    {
+        type: "email",
+        placeholder: "Email*",
+        name: "email"
+    },
+]

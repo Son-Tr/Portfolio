@@ -1,2 +1,88 @@
 @import '../../styles/mixins';
 @import '../../styles/variables';
+
+#contact {
+    .container {
+
+        /* ---------- social-icons ---------- */
+        .social-icons {
+            margin-bottom: 1rem;
+            gap: 1rem;
+            @include flex(center, center, row);
+
+            span {
+                display: inline-flex;
+                padding: 1rem;
+                background-color: $clr-bg;
+                border-radius: 50px;
+
+                svg {
+                    height: 1.5rem;
+                    width: 1.5rem;
+                }
+            }
+        }
+
+        /* ----------- form-input ----------- */
+        .form-input {
+            margin: 0 auto;
+
+            gap: 1rem;
+            @include grid-row(5, 1fr);
+            align-items: center;
+
+            //responsive
+            @include responsive-max(768px) {
+                width: 80%;
+            }
+
+            //responsive
+            @include responsive-max(540px) {
+                width: 90%;
+            }
+
+            //input
+
+            .input {
+                width: 100%;
+                display: inline-block;
+                color: black;
+                padding: 0px 25px;
+                line-height: 50px;
+                font-size: 1.125rem;
+                background: $clr-bg;
+
+                border: none;
+                border-radius: 8px;
+                border: 1px solid $clr-border;
+
+                outline: none;
+                box-shadow: none;
+            }
+
+            textarea {
+                grid-row: span 2;
+                overflow: auto;
+                resize: none;
+            }
+
+        }
+
+        .wrap-btn {
+            justify-content: center;
+        }
+
+    }
+
+    // button-back
+    .button-back {
+        padding: 12px 20px;
+        border-radius: 10px;
+
+        &::before {
+            display: none;
+
+        }
+    }
+
+}
