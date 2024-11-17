@@ -45,12 +45,12 @@
 
             .input {
                 width: 100%;
-                display: inline-block;
                 color: black;
                 padding: 0px 25px;
                 line-height: 50px;
                 font-size: 1.125rem;
                 background: $clr-bg;
+                display: inline-block;
 
                 border: none;
                 border-radius: 8px;
@@ -62,9 +62,10 @@
             }
 
             textarea {
-                grid-row: span 2;
-                overflow: auto;
                 resize: none;
+                height: 100%;
+                overflow: auto;
+                grid-row: span 2;
             }
 
         }
@@ -77,9 +78,9 @@
 
     // button-back
     .button-back {
-        background-color: $clr-bg;
         padding: 12px 20px;
         border-radius: 10px;
+        background-color: $clr-bg;
         border: 1px solid $clr-border;
 
         &::before {

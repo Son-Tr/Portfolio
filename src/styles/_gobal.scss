@@ -76,7 +76,9 @@ img {
 
 /* ------------- button ------------- */
 .button {
+    color: $clr-dark-blue;
     background-color: $clr-white;
+
     border-radius: 100px;
     box-shadow:
         rgba(0, 0, 0, 0.1) 0 -25px 18px -14px inset,
@@ -85,17 +87,18 @@ img {
         rgba(0, 0, 0, 0.1) 0 4px 8px,
         rgba(0, 0, 0, 0.1) 0 8px 16px,
         rgba(0, 0, 0, 0.1) 0 16px 32px;
-    color: #1b2a40;
     cursor: pointer;
-    display: inline-block;
-    @include font-family("Archivo", sans-serif);
-    text-transform: capitalize;
+
     padding: 7px 20px;
     text-align: center;
+    display: inline-block;
     text-decoration: none;
-    transition: all 250ms;
+    text-transform: capitalize;
+    @include font-family("Archivo", sans-serif);
+
     border: 0;
     font-size: 16px;
+
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
@@ -135,13 +138,17 @@ img {
     border-radius: 30px;
 
     cursor: pointer;
-    text-transform: uppercase;
+    text-transform: capitalize;
     text-decoration: none;
     transition: all 0.3s ease-in-out;
 
     outline: none;
     position: relative;
     overflow: hidden;
+
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
 
     /* -------------- hover ------------- */
     &:hover {

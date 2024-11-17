@@ -2,6 +2,7 @@ import React from 'react'
 import './Skills.scss'
 import { listSkill } from '../../assets/data/data';
 
+
 const Skills = () => {
     return (
         <div id='skills' className='bg'>

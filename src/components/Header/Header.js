@@ -23,7 +23,6 @@ const Header = () => {
                     nav.classList.add("nav-fixed")
                 }
             }
-
         }
 
         window.addEventListener("scroll", handleScroll)
