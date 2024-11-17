@@ -1,40 +1,41 @@
-import { BOOTSTRAP, HTML5, SASS, JAVASCRIPT, REACT, GIT, FIGMA, CSS3 } from '../img/linkImg';
+import { html, BOOTSTRAP, SASS, JAVASCRIPT, REACT, GIT, FIGMA, CSS3 } from '../img/linkImg';
 export const listSkill = [
     {
         skill: "HTML5",
-        img: HTML5,
+        icon: html,
 
     },
     {
         skill: "CSS3",
-        img: CSS3,
+        icon: CSS3,
     },
     {
-        skill: "SASS",
-        img: SASS,
+        skill: "Sass",
+        icon: SASS,
     },
     {
-        skill: "JAVASCRIPT",
-        img: JAVASCRIPT,
+        skill: "JavaScript",
+        icon: JAVASCRIPT,
 
     },
     {
-        skill: "REACT",
-        img: REACT,
+        skill: "React",
+        icon: REACT,
     },
     {
-        skill: "BOOTSTRAP",
-        img: BOOTSTRAP,
+        skill: "Bootstrap",
+        icon: BOOTSTRAP,
     },
     {
-        skill: "GIT",
-        img: GIT,
+        skill: "Git",
+        icon: GIT,
     },
 
     {
-        skill: "FIGMA",
-        img: FIGMA,
+        skill: "Figma",
+        icon: FIGMA,
     },
 
 ]
+
 
