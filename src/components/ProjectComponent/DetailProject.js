@@ -45,7 +45,7 @@ const DetailProject = ({ item, clickGetBack }) => {
             <div className="list-img-part">
                 <Swiper
                     style={{
-                        '--swiper-pagination-color': '#ed3548',
+                        '--swiper-pagination-color': '#02295a',
                     }}
                     speed={600}
                     loop={true}

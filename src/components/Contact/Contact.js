@@ -1,22 +1,20 @@
-import React, { useState } from 'react';
 import './Contact.scss';
-import { input } from '../../assets/data/data';
+import emailjs from 'emailjs-com'; // Import EmailJSz
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelopeOpen } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
-import emailjs from 'emailjs-com'; // Import EmailJS
 
 const Contact = () => {
-    // Step 1: Create state variables for the input fields
+
     const [formData, setFormData] = useState({
-        name: '',
+        text: '',
         email: '',
-        phone: '',
+        number: '',
         message: ''
     });
 
-    // Step 2: Handle input changes and update state
+    //Handle input changes and update state
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({
@@ -25,27 +23,28 @@ const Contact = () => {
         });
     };
 
-    // Step 3: Handle form submission
+    // Handle form submission
     const handleSubmit = (e) => {
         e.preventDefault(); // Prevent default form submission
 
         // Send email using EmailJS
         emailjs.send(
-            'service_aih5yjc', // Your service ID from EmailJS
-            'template_09jz79q', // Your template ID from EmailJS
-            formData, // Send form data directly
-            'Xjyfx29v4VeYkicPa' // Your user ID from EmailJS
+            'service_aih5yjc',
+            'template_09jz79q',
+            formData, // Send formData directly
+            'Xjyfx29v4VeYkicPa'
         ).then((result) => {
-            console.log('Email successfully sent:', result.text);
+            // console.log('Email successfully sent:', result.text);
             alert('Message sent successfully!');
+            // clear input when user submit
             setFormData({
-                name: '',
+                text: '',
                 email: '',
-                phone: '',
+                number: '',
                 message: ''
             });
         }).catch((error) => {
-            console.error('Error sending email:', error.text);
+            // console.error('Error sending email:', error.text);
             alert('Failed to send message!');
         });
     };
@@ -61,29 +60,36 @@ const Contact = () => {
                     <a href="https://github.com/Son-Tr" target='_blank' rel="noopener noreferrer">
                         <span className='button-back'><FontAwesomeIcon icon={faGithub} /></span>
                     </a>
-                    <a href="mailto:sontran.kh1502@gmail.com" target='_blank' rel="noopener noreferrer">
-                        <span className='button-back'><FontAwesomeIcon icon={faEnvelopeOpen} /></span>
-                    </a>
                 </div>
                 <form className="form-input" onSubmit={handleSubmit}>
-                    {input.map(({ type, placeholder, name }, index) => {
-                        return (
-                            <input
-                                className='input'
-                                key={index}
-                                type={type}
-                                name={name}
-                                value={formData[name]} // Bind state to input
-                                onChange={handleChange} // Update state on change
-                                required
-                                placeholder={placeholder} />
-                        );
-                    })}
+                    <input
+                        className='input'
+                        type="text"
+                        name="text"
+                        value={formData.text}
+                        onChange={handleChange}
+                        placeholder="Name" />
+                    <input
+                        className='input'
+                        type="number"
+                        name="number"
+                        value={formData.number}
+                        onChange={handleChange}
+                        placeholder="Phone Number" />
+                    <input
+                        className='input'
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                        placeholder="Email*" />
                     <textarea
                         className='input'
                         name="message"
-                        value={formData.message} // Bind state to textarea
-                        onChange={handleChange} // Update state on change
+                        value={formData.message}
+                        onChange={handleChange}
+                        required
                         placeholder='Message*'>
                     </textarea>
 

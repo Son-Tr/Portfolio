@@ -10,6 +10,8 @@
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    color: $clr-black;
+
 }
 
 a {
@@ -22,6 +24,7 @@ img {
     display: block;
     width: 100%;
 }
+
 
 
 /* ------------ container ----------- */
@@ -42,6 +45,7 @@ img {
 
     @include responsive-max(576px) {
         max-width: 90%;
+        padding: 0;
 
     }
 
@@ -101,8 +105,8 @@ img {
 
     //hover
     &:hover {
-        background: linear-gradient(35deg, $clr-orange, $clr-pink);
-        box-shadow: 0 15px 25px rgba(255, 60, 100, 0.4);
+        background: linear-gradient(35deg, $clr-pastel-blue, $clr-light-blue);
+        box-shadow: 0 15px 25px rgba(130, 190, 255, 0.4);
         transform: scale(1.05) rotate(-1deg);
         color: $clr-very-light-gray;
     }
@@ -110,7 +114,7 @@ img {
     //active
     &:active {
         background-color: #a6b1ba;
-        box-shadow: 0 5px 10px rgba(255, 60, 130, 0.2);
+        box-shadow: 0 5px 10px rgba(130, 190, 255, 0.2);
         transform: scale(0.98);
     }
 
@@ -126,8 +130,8 @@ img {
     font-weight: bold;
     @include font-family("Archivo", sans-serif);
 
-    background: #d5dee6;
-    color: #1b2a40;
+    background: $clr-white;
+    color: $clr-dark-blue;
 
     border: none;
     border-radius: 30px;
@@ -145,19 +149,18 @@ img {
     &:hover {
         transform: translateY(-5px);
         color: $clr-very-light-gray;
-        box-shadow: 0 15px 25px rgba(255, 60, 130, 0.4);
-        background: linear-gradient(135deg, $clr-pink, $clr-orange);
+        box-shadow: 0 15px 25px rgba(130, 190, 255, 0.4);
+        background: linear-gradient(35deg, $clr-pastel-blue, $clr-light-blue);
 
-        // &::before {
-        //     transform: translateX(-5px);
-
-        // }
+        &::before {
+            transform: translateX(-5px);
+        }
     }
 
     /* ------------- active ------------- */
     &:active {
         transform: translateY(0);
-        box-shadow: 0 5px 10px rgba(255, 60, 130, 0.3);
+        box-shadow: 0 5px 10px rgba(130, 190, 255, 0.3);
     }
 
     /* ------------- Icon style ------------- */
@@ -168,6 +171,8 @@ img {
         transition: transform 0.4s linear;
     }
 }
+
+
 
 /* ------ background component ------ */
 .bg {
@@ -188,4 +193,18 @@ img {
 
 .dark {
     background: $clr-bg;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    /* Remove the default styles */
+    margin: 0;
+    /* Remove any margins */
+}
+
+/* Hide number input spinners for Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+    /* Remove the spinner controls */
 }

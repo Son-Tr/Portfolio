@@ -7,7 +7,6 @@
     height: 100vh;
 }
 
-
 .nav-header {
     position: fixed;
     top: 0;
@@ -116,7 +115,7 @@
 
                 //hover
                 &:hover {
-                    color: $clr-red;
+                    color: $clr-pastel-blue;
 
                     &::before {
                         width: 100%;
@@ -130,8 +129,8 @@
                     bottom: -5px;
                     position: absolute;
                     width: 0;
-                    height: 1px;
-                    background: $clr-red;
+                    height: 1.5px;
+                    background: $clr-pastel-blue;
                     @include transition-ease-in-out-3;
                 }
 
@@ -177,11 +176,12 @@
 
     /* ------------ nav-fixed ----------- */
     &.nav-fixed {
+
         @include transition-ease-in-out;
         box-shadow: 0 3px 6px 0 #0000000d;
-        background: rgba(255, 255, 255, 0.9); // Light color with some transparency
-        backdrop-filter: blur(10px); // Adjust the blur as needed
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2); // Optional border for better definition
+        background: $clr-bg;
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
         height: 65px;
 
         /* ------ nav-fixed responsive ------ */

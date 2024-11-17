@@ -54,6 +54,17 @@
     /* --------- detail-project --------- */
     .button-back {
         margin-bottom: 1rem;
+        background-color: $clr-bg;
+
+        &:hover {
+            box-shadow:
+                rgba(0, 0, 0, 0.1) 0 -25px 18px -14px inset,
+                rgba(0, 0, 0, 0.1) 0 1px 2px,
+                rgba(0, 0, 0, 0.1) 0 2px 4px,
+                rgba(0, 0, 0, 0.1) 0 4px 8px,
+                rgba(0, 0, 0, 0.1) 0 8px 16px,
+                rgba(0, 0, 0, 0.1) 0 16px 32px;
+        }
     }
 
     .detail-project {
@@ -95,6 +106,18 @@
             .content {
                 text-align: justify;
                 margin: 0.5rem 0;
+            }
+        }
+
+        .button {
+            &:hover {
+                box-shadow:
+                    rgba(0, 0, 0, 0.1) 0 -25px 18px -14px inset,
+                    rgba(0, 0, 0, 0.1) 0 1px 2px,
+                    rgba(0, 0, 0, 0.1) 0 2px 4px,
+                    rgba(0, 0, 0, 0.1) 0 4px 8px,
+                    rgba(0, 0, 0, 0.1) 0 8px 16px,
+                    rgba(0, 0, 0, 0.1) 0 16px 32px;
             }
         }
     }

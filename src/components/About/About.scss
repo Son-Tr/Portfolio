@@ -5,9 +5,13 @@
 
     /* ---------- about-detail ---------- */
     .about-detail {
-        padding-bottom: 1rem;
         gap: 1rem;
+        max-width: 992px;
+        margin: auto;
+
+
         @include flex(center, flex-start, row);
+
 
         //responsive
         @include responsive-max(767px) {
@@ -17,6 +21,8 @@
         //img-hero
         .img-hero {
             border-radius: 8px;
+            width: 360px;
+
 
             //responsive
             @include responsive-max(912px) {

@@ -1,17 +1,35 @@
-$clr-white: #ffffff;
-$clr-bg: #d5dee6;
-$clr-border: #d6d9e5;
+// $clr-white: #ffffff;
+// $clr-bg: #d5dee6;
+// $clr-border: #d6d9e5;
 
-$clr-blue: #473dff;
-$clr-light-blue: #bfe2fd;
-$clr-dark-blue: #02295a;
-$clr-pastel-blue: #a8baff;
+// $clr-blue: #473dff;
+// $clr-light-blue: #bfe2fd;
+// $clr-dark-blue: #02295a;
+// $clr-pastel-blue: #a8baff;
 
-$clr-pink: #ff3f81;
-$clr-orange: #ff7b42;
-$clr-red: #ed3548;
+// $clr-pink: #ff3f81;
+// $clr-orange: #ff7b42;
+// $clr-red: #ed3548;
 
-$clr-black: #1e1e1e;
-$clr-gray: #9699ab;
-$clr-light-gray: #d6d9e6;
-$clr-very-light-gray: #fafbff;
+// $clr-black: #1e1e1e;
+// $clr-gray: #9699ab;
+// $clr-light-gray: #d6d9e6;
+// $clr-very-light-gray: #fafbff;
+
+$clr-white: #ffffff; // Keeping white for text and background accents
+$clr-bg: #E8EFF7; // New background color (light pastel blue)
+$clr-border: #c3cfe1; // Softer border color to match the lighter background
+
+$clr-blue: #3f5b91; // Adjusted blue, a bit darker for better contrast on light background
+$clr-light-blue: #bfe2fd; // Keeping the original light blue (good for hover effects)
+$clr-dark-blue: #02295a; // Darker blue remains unchanged for use in contrast areas like text or active state
+$clr-pastel-blue: #a8baff; // Keeping pastel blue for subtle effects like gradients
+
+$clr-pink: #f84f99; // Adjusted pink to balance better with the new background
+$clr-orange: #ff7b42; // Keeping the original orange, it works well for accents and buttons
+$clr-red: #f54263; // Softer red to suit the lighter background, less harsh than before
+
+$clr-black: #1e1e1e; // Retaining for dark text, no change needed
+$clr-gray: #9699ab; // Keeping soft gray for neutral text and borders
+$clr-light-gray: #d6d9e6; // Softened light gray for lighter elements, fits well with the background
+$clr-very-light-gray: #fafbff; // Very light gray is a great match with the soft background color
