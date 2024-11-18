@@ -2,8 +2,19 @@ import logo from './logo.png';
 import lake from './lake.png';
 import mountain from './mountain.jpg';
 import hero from './hero.jpg';
+import corp1 from './corp1.png';
+import corp2 from './corp2.png';
+import corp3 from './corp3.png';
+import corp4 from './corp4.png';
+import corp5 from './corp5.png';
+import corp6 from './corp6.png';
+import corp7 from './corp7.png';
 
-export { logo, lake, mountain, hero }
+
+
+
+
+export { logo, lake, mountain, hero, corp1, corp2, corp3, corp4, corp5, corp6, corp7 }
 
 /* --------------- svg -------------- */
 export const html = (<svg width="85" height="100" viewBox="0 0 85 100" fill="none" xmlns="http://www.w3.org/2000/svg">

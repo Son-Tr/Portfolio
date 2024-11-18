@@ -101,6 +101,7 @@
 
             h1 {
                 font-size: 1.75rem;
+                @include font-family('Archivo', sans-serif);
             }
 
             .content {

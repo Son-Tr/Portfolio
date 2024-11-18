@@ -83,9 +83,23 @@
         background-color: $clr-bg;
         border: 1px solid $clr-border;
 
+        svg {
+            path {
+                @include transition-ease-in-out-3;
+            }
+        }
+
         &::before {
             display: none;
+        }
 
+        //hover
+        &:hover {
+            svg {
+                path {
+                    fill: $clr-white;
+                }
+            }
         }
     }
 

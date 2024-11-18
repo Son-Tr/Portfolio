@@ -177,12 +177,12 @@
     /* ------------ nav-fixed ----------- */
     &.nav-fixed {
 
+        height: 65px;
+        backdrop-filter: blur(15px);
         @include transition-ease-in-out;
         box-shadow: 0 3px 6px 0 #0000000d;
-        background: $clr-bg;
-        backdrop-filter: blur(10px);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-        height: 65px;
+        background: rgb(232, 239, 247, 0.8);
+        // border-bottom: 1px solid rgba(255, 255, 255, 0.8);
 
         /* ------ nav-fixed responsive ------ */
         @include responsive-max(576px) {
@@ -197,8 +197,8 @@
             @include flex(space-between, center, row);
 
             .nav-link-logo {
-                color: $clr-black;
                 display: block;
+                color: $clr-black;
                 @include transition-ease-in-out;
                 @include flex(center, center, row);
                 @include pop-up(0.3s, linear, 0s);
@@ -220,8 +220,8 @@
         &.show {
             @include responsive-max(1200px) {
 
-                background: #1d2a37b3;
                 height: 100vh;
+                background: #1d2a37b3;
             }
         }
     }

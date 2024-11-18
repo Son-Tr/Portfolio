@@ -181,17 +181,17 @@ img {
 
 /* ------ background component ------ */
 .bg {
-    padding: 5rem 0 2rem;
+    padding: 4rem 0;
 
     @include font-family('Open Sans', sans-serif);
 
     /* ------- project responsive ------- */
     @include responsive-max(992px) {
-        padding: 4rem 0 2rem;
+        padding: 3.8rem 0 3.8rem;
     }
 
     @include responsive-max(576px) {
-        padding: 3.25rem 0 2rem;
+        padding: 3.25rem 0 3.25rem;
     }
 
 }
@@ -200,6 +200,7 @@ img {
     background: $clr-bg;
 }
 
+/* ---- remove snipper control of input --- */
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;

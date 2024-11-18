@@ -1,6 +1,7 @@
 import React from 'react'
 import './Skills.scss'
 import { listSkill } from '../../assets/data/data';
+// import { logo } from '../../assets/img/linkImg';
 
 
 const Skills = () => {
@@ -16,6 +17,7 @@ const Skills = () => {
                         </div>)
                     })}
                 </div>
+                {/* <img className='logo' src={logo} alt="logo" /> */}
             </div>
         </div>
     )
