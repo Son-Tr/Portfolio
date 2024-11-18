@@ -1,6 +1,6 @@
 import './Header.scss'
 import React, { useEffect, useState } from "react";
-import { logo } from '../../assets/img/linkImg';
+import { logo1, logo2 } from '../../assets/img/linkImg';
 import resume from '../../assets/resume/Son-Tran-Resume.pdf'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
@@ -9,6 +9,7 @@ import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
     const [isNavBar, setNavBar] = useState(false);
+    const [navFix, setNavFix] = useState(false)
 
     // handle when user scroll bar, display and hidden header-fixed
     useEffect(() => {
@@ -17,10 +18,12 @@ const Header = () => {
             let banner = document.querySelector(".banner");
             let heightBanner = parseInt(getComputedStyle(banner).height);
             if (window.scrollY <= (heightBanner * 1 / 3)) {
-                nav.classList.remove("nav-fixed")
+                nav.classList.remove("nav-fixed");
+                setNavFix(false)
             } else {
                 if (window.scrollY > (heightBanner * 1 / 3)) {
-                    nav.classList.add("nav-fixed")
+                    nav.classList.add("nav-fixed");
+                    setNavFix(true)
                 }
             }
         }
@@ -74,7 +77,7 @@ const Header = () => {
             <div className="nav-header">
                 <header className="container">
                     <a className="nav-link-logo" href='/' rel="noopener noreferrer">
-                        <span className="icon-logo"><img src={logo} alt="logo" /></span>
+                        <span className="icon-logo"><img src={navFix ? logo2 : logo1} alt="logo" /></span>
                         <span className="logo">SonTr</span>
                     </a>
 

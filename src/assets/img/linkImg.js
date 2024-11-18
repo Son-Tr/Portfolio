@@ -1,4 +1,8 @@
 import logo from './logo.png';
+import logo1 from './logo1.png';
+import logo2 from './logo2.png';
+
+
 import lake from './lake.png';
 import hero from './hero.jpg';
 import mountain from './mountain.jpg';
@@ -44,7 +48,7 @@ import promodo3 from './promodo3.png';
 
 
 
-export { logo, lake, mountain, hero, corp1, corp2, corp3, corp4, corp5, corp6, corp7, calculator1, calculator2, quote1, quote2, quote4, markdown1, markdown2, drum1, drum2, meipaly1, meipaly2, meipaly3, meipaly4, fitclub1, fitclub2, fitclub3, fitclub4, fitclub5, fitclub6, fitclub7, promodo1, promodo2, promodo3 }
+export { logo, logo1, logo2, lake, mountain, hero, corp1, corp2, corp3, corp4, corp5, corp6, corp7, calculator1, calculator2, quote1, quote2, quote4, markdown1, markdown2, drum1, drum2, meipaly1, meipaly2, meipaly3, meipaly4, fitclub1, fitclub2, fitclub3, fitclub4, fitclub5, fitclub6, fitclub7, promodo1, promodo2, promodo3 }
 
 
 
