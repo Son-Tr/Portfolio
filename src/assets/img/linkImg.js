@@ -1,7 +1,8 @@
 import logo from './logo.png';
 import lake from './lake.png';
-import mountain from './mountain.jpg';
 import hero from './hero.jpg';
+import mountain from './mountain.jpg';
+
 import corp1 from './corp1.png';
 import corp2 from './corp2.png';
 import corp3 from './corp3.png';
@@ -10,13 +11,44 @@ import corp5 from './corp5.png';
 import corp6 from './corp6.png';
 import corp7 from './corp7.png';
 
+import calculator1 from './calculator1.png';
+import calculator2 from './calculator2.png';
+
+import quote1 from './quote1.png';
+import quote2 from './quote2.png';
+import quote4 from './quote4.png';
+
+import markdown1 from './markdown1.png';
+import markdown2 from './markdown2.png';
+
+import drum1 from './drum1.png';
+import drum2 from './drum2.png';
+
+import meipaly1 from './meipaly1.png';
+import meipaly2 from './meipaly2.png';
+import meipaly3 from './meipaly3.png';
+import meipaly4 from './meipaly4.png';
+
+import fitclub1 from './fitclub1.png';
+import fitclub2 from './fitclub2.png';
+import fitclub3 from './fitclub3.png';
+import fitclub4 from './fitclub4.png';
+import fitclub5 from './fitclub5.png';
+import fitclub6 from './fitclub6.png';
+import fitclub7 from './fitclub7.png';
+
+import promodo1 from './promodo1.png';
+import promodo2 from './promodo2.png';
+import promodo3 from './promodo3.png';
 
 
 
 
-export { logo, lake, mountain, hero, corp1, corp2, corp3, corp4, corp5, corp6, corp7 }
+export { logo, lake, mountain, hero, corp1, corp2, corp3, corp4, corp5, corp6, corp7, calculator1, calculator2, quote1, quote2, quote4, markdown1, markdown2, drum1, drum2, meipaly1, meipaly2, meipaly3, meipaly4, fitclub1, fitclub2, fitclub3, fitclub4, fitclub5, fitclub6, fitclub7, promodo1, promodo2, promodo3 }
 
-/* --------------- svg -------------- */
+
+
+/* --------------- export svg -------------- */
 export const html = (<svg width="85" height="100" viewBox="0 0 85 100" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M0.015625 0L7.68491 90L42.1215 100L76.546 90.0062L84.2273 0H0.015625Z" fill="#FF5722" />
     <path d="M67.5955 29.4316H42.1215H27.2341L28.1965 40.7379H42.1215H66.6331L63.7399 74.6379L42.1215 80.9066L42.1035 80.9129L20.4972 74.6379L18.9874 56.9066H29.574L30.362 66.1066L42.1095 69.4254L42.1215 69.4191L53.8811 66.1004L55.1082 51.7816H42.1215H18.5543L15.7031 18.4004H42.1215H68.5339L67.5955 29.4316Z" fill="#FAFAFA" />

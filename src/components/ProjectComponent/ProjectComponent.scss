@@ -38,6 +38,15 @@
                 cursor: pointer;
                 border-radius: 8px;
                 border: 1px solid $clr-border;
+
+                //responsive
+                @include responsive-max(1280px) {
+                    height: 140px;
+                }
+
+                @include responsive-max(992px) {
+                    height: 150px;
+                }
             }
 
             .name-project {
@@ -51,7 +60,7 @@
         }
     }
 
-    /* --------- detail-project --------- */
+    /* --------- detail-project component --------- */
     .button-back {
         margin-bottom: 1rem;
         background-color: $clr-bg;
@@ -67,6 +76,7 @@
         }
     }
 
+    //detail-project class
     .detail-project {
         gap: 2rem;
         @include flex(center, flex-start, row);
@@ -100,7 +110,7 @@
             }
 
             h1 {
-                font-size: 1.75rem;
+                font-size: 1.5rem;
                 @include font-family('Archivo', sans-serif);
             }
 

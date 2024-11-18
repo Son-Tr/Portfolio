@@ -1,6 +1,6 @@
-import { html, BOOTSTRAP, SASS, JAVASCRIPT, REACT, GIT, FIGMA, CSS3, corp1, corp2, corp3, corp4, corp5, corp6, corp7 } from '../img/linkImg';
+import { html, BOOTSTRAP, SASS, JAVASCRIPT, REACT, GIT, FIGMA, CSS3, corp1, corp2, corp3, corp4, corp5, corp6, corp7, calculator1, calculator2, quote1, quote2, quote4, markdown1, markdown2, drum1, drum2, meipaly1, meipaly2, meipaly3, meipaly4, fitclub1, fitclub2, fitclub3, fitclub4, fitclub5, fitclub6, fitclub7, promodo1, promodo2, promodo3 } from '../img/linkImg';
 
-
+/* ----------- list skills ---------- */
 export const listSkill = [
     {
         skill: "HTML5",
@@ -59,8 +59,7 @@ export const project = [
         content: "The Pomodoro App is a productivity tool that uses the Pomodoro Technique to help users manage their time efficiently. Users can customize the session and break durations, start or reset the timer, and stay focused with auditory notifications. Built using React, the app offers a clean and minimalist design that keeps distractions to a minimum, encouraging productivity. The application efficiently manages state changes and updates in real-time, providing a smooth and engaging experience.",
         skills: "React, Redux",
         img: [
-            "https://i.imgur.com/H22WUrq.png",
-            "https://i.imgur.com/DTjqnHI.png"
+            promodo1, promodo2, promodo3
         ],
         linkGithub: "https://github.com/Son-Tr/25-plus-5-clock",
         linkWeb: "https://pomodoro-timer-project-son-tr.vercel.app/"
@@ -71,8 +70,7 @@ export const project = [
         content: "This Calculator App is a simple yet powerful tool designed to perform basic arithmetic operations, including addition, subtraction, multiplication, and division. It features a responsive design that adapts to different screen sizes, ensuring accessibility for all users. The app is built with React to handle user input, error checking (such as division by zero), and a clear button to reset calculations. The intuitive interface makes it easy to use for anyone.",
         skills: "React",
         img: [
-            "https://i.imgur.com/3KMXFDx.png",
-            "https://i.imgur.com/bWXlM13.png"
+            calculator1, calculator2
         ],
         linkGithub: "https://github.com/Son-Tr/calculator",
         linkWeb: "https://calculator-project-son-tr.vercel.app/"
@@ -83,8 +81,7 @@ export const project = [
         content: "The Random Quote app fetches random quotes from an API. Users can easily get a new quote with the click of a button and share their favorite quotes on Twitter. Built using React, the app focuses on clean design and fluid transitions.",
         skills: "React, REST API",
         img: [
-            "https://i.imgur.com/c6jCZlr.png",
-            "https://i.imgur.com/pkCEKi6.png"
+            quote1, quote2, quote4
         ],
         linkGithub: "https://github.com/Son-Tr/Build-a-Random-Quote-Machine",
         linkWeb: "https://random-quote-machine-project-son-tr.vercel.app/"
@@ -95,8 +92,7 @@ export const project = [
         content: "The Markdown Previewer is a real-time editor that allows users to write and preview Markdown text simultaneously. It supports various Markdown syntax, including headers, lists, links, and code blocks. The app is built with React, focusing on a clean and simple interface. This project demonstrates how to handle user input and efficiently update the preview area in real-time.",
         skills: "React, Markdown library",
         img: [
-            "https://i.imgur.com/tqTuopz.png",
-            "https://i.imgur.com/6C4NdpX.png"
+            markdown1, markdown2
         ],
         linkGithub: "https://github.com/Son-Tr/Build-a-Markdown-Previewer",
         linkWeb: "https://markdown-previewer-project-son-tr.vercel.app/"
@@ -107,8 +103,7 @@ export const project = [
         content: "The Drum Machine App is an interactive musical tool that allows users to play different drum sounds by clicking on buttons or pressing keys on their keyboard. Each button is mapped to a specific audio sample, making it easy to create beats. The app features a volume control slider, customizable sound effects, and a visually appealing layout. Developed with React, it uses JavaScript for handling keyboard events and managing audio playback.",
         skills: "React, Audio API, Redux",
         img: [
-            "https://i.imgur.com/0AysjY1.png",
-            "https://i.imgur.com/CD5k65u.png"
+            drum1, drum2
         ],
         linkGithub: "https://github.com/Son-Tr/Build-a-Drum-Machine",
         linkWeb: "https://drum-machine-project-son-tr.vercel.app/"
@@ -119,8 +114,7 @@ export const project = [
         content: "The Meipaly Landing Page is a fully responsive design for a fictional company. It features modern animations and an easy-to-navigate layout. The project demonstrates the use of CSS libraries and advanced techniques to create a visually stunning website that performs well on both desktop and mobile devices.",
         skills: "HTML, CSS Flexbox, Responsive Design, Libraries",
         img: [
-            "https://i.imgur.com/uNHzbic.png",
-            "https://i.imgur.com/jGE0bNL.png"
+            meipaly1, meipaly2, meipaly3, meipaly4
         ],
         linkGithub: "https://github.com/Son-Tr/Meipaly",
         linkWeb: "https://meipaly-project-son-tr.vercel.app/"
@@ -131,8 +125,7 @@ export const project = [
         content: "The FitClub Landing Page is for a fitness club. Built with HTML and CSS, it focuses on responsive design principles to ensure a seamless experience across all devices.",
         skills: "HTML, CSS Flexbox, Responsive Design",
         img: [
-            "https://i.imgur.com/KpZ03hQ.png",
-            "https://i.imgur.com/Hy6vjt6.png"
+            fitclub1, fitclub2, fitclub3, fitclub4, fitclub5, fitclub6, fitclub7
         ],
         linkGithub: "https://github.com/Son-Tr/Build-a-Product-Landing-Page",
         linkWeb: "https://fitclub-son-tr.vercel.app/"
