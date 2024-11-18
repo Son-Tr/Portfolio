@@ -131,6 +131,15 @@
                     rgba(0, 0, 0, 0.1) 0 16px 32px;
             }
         }
+
+        //wrap-btn responsive 
+        .wrap-btn {
+            @include responsive-max(992px) {
+                justify-content: flex-start;
+                gap: 2rem;
+            }
+
+        }
     }
 
 
