@@ -45,7 +45,15 @@
                 }
 
                 @include responsive-max(992px) {
+                    height: 160px;
+                }
+
+                @include responsive-max(820px) {
                     height: 150px;
+                }
+
+                @include responsive-max(576px) {
+                    height: 180px;
                 }
             }
 
