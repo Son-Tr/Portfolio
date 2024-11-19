@@ -69,8 +69,13 @@
             //icon-logo
             .icon-logo {
                 display: block;
-                width: 2rem;
-                height: 2rem;
+                width: 1.75rem;
+                height: 1.75rem;
+
+                @include responsive-max(576px) {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                }
             }
         }
 

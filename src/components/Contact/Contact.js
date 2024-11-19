@@ -4,6 +4,9 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Contact = () => {
 
@@ -17,6 +20,7 @@ const Contact = () => {
     //Handle input changes and update state
     const handleChange = (e) => {
         const { name, value } = e.target;
+
         setFormData({
             ...formData,
             [name]: value
@@ -28,14 +32,21 @@ const Contact = () => {
         e.preventDefault(); // Prevent default form submission
 
         // Send email using EmailJS
-        emailjs.send(
-            'service_aih5yjc',
-            'template_09jz79q',
-            formData, // Send formData directly
-            'Xjyfx29v4VeYkicPa'
+        toast.promise(
+            emailjs.send(
+                'service_aih5yjc',
+                'template_09jz79q',
+                formData, // Send formData directly
+                'Xjyfx29v4VeYkicPa'),
+            {
+                //The state of the notification system
+                pending: "Sending your message...",
+                success: "Message sent successfully!",
+                error: "Failed to send message."
+            }
         ).then((result) => {
             // console.log('Email successfully sent:', result.text);
-            alert('Message sent successfully!');
+
             // clear input when user submit
             setFormData({
                 text: '',
@@ -45,8 +56,7 @@ const Contact = () => {
             });
         }).catch((error) => {
             // console.error('Error sending email:', error.text);
-            alert('Failed to send message!');
-        });
+        })
     };
 
     return (
@@ -76,14 +86,16 @@ const Contact = () => {
                         value={formData.number}
                         onChange={handleChange}
                         placeholder="Phone Number" />
-                    <input
-                        className='input'
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                        placeholder="Email*" />
+                    <div className="wrap-iput">
+                        <input
+                            className="input"
+                            type="email"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            required
+                            placeholder="Email*" />
+                    </div>
                     <textarea
                         className='input'
                         name="message"
@@ -99,6 +111,9 @@ const Contact = () => {
                         </button>
                     </div>
                 </form>
+                <ToastContainer
+                    limit={1}
+                />
             </div>
         </div>
     );
