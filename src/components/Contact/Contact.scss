@@ -60,17 +60,6 @@
                 @include font-family("Open Sans", sans-serif);
             }
 
-            .wrap-iput {
-                .error {
-                    border-color: $clr-red;
-                }
-
-                .error-message {
-                    font-size: 0.725rem;
-                    color: $clr-red;
-                }
-            }
-
             textarea {
                 resize: none;
                 height: 100%;
