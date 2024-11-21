@@ -43,7 +43,7 @@
         .nav-link-logo {
             font-size: 1.5rem;
             display: none;
-            color: $clr-black;
+
             @include transition-ease-in-out;
             @include font-family('Mali', cursive);
 
@@ -57,7 +57,7 @@
                 @include pop-up(0.3s, linear, 0s);
 
                 .logo {
-                    color: $clr-very-light-gray;
+                    color: $clr-pastel-blue;
                     @include transition-ease-in-out-3;
                 }
             }
@@ -121,6 +121,7 @@
             .nav-link {
                 position: relative;
                 margin-left: 3.5rem;
+                color: $clr-dark-blue;
                 text-transform: uppercase;
                 @include transition-ease;
 
@@ -215,7 +216,7 @@
                 @include pop-up(0.3s, linear, 0s);
 
                 .logo {
-                    color: $clr-black;
+                    color: $clr-dark-blue;
                 }
 
             }

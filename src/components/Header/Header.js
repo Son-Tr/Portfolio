@@ -1,6 +1,6 @@
 import './Header.scss'
 import React, { useEffect, useState } from "react";
-import { logo1, logo2 } from '../../assets/img/linkImg';
+import { logo1, logo } from '../../assets/img/linkImg';
 import resume from '../../assets/resume/Son-Tran-Resume.pdf'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
@@ -77,7 +77,7 @@ const Header = () => {
             <div className="nav-header">
                 <header className="container">
                     <a className="nav-link-logo" href='/' rel="noopener noreferrer">
-                        <span className="icon-logo"><img src={navFix ? logo2 : logo1} alt="logo" /></span>
+                        <span className="icon-logo"><img src={navFix ? logo : logo1} alt="logo" /></span>
                         <span className="logo">SonTr</span>
                     </a>
 
