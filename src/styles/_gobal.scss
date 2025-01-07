@@ -1,17 +1,17 @@
 @import './mixins';
 @import './variables';
-@import url('https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200..700;1,200..700&family=Ubuntu:ital,wght@0,300..700;1,300..700&family=Open+Sans:wght@300..800&family=Archivo:wght@100..900&display=swap');
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    color: $clr-black;
 
+}
+
+body {
+    color: $clr-black;
 }
 
 a {
@@ -100,11 +100,11 @@ img {
     border: 0;
     font-size: 16px;
     font-weight: bold;
+    transition: all .3s ease-in-out;
 
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    transition: all .3s ease-in-out;
 
     //hover
     &:hover {
@@ -204,16 +204,13 @@ img {
 }
 
 /* ---- remove snipper control of input --- */
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    /* Remove the default styles */
-    margin: 0;
-    /* Remove any margins */
-}
-
-/* Hide number input spinners for Firefox */
 input[type=number] {
+    appearance: none;
     -moz-appearance: textfield;
-    /* Remove the spinner controls */
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+        margin: 0;
+        appearance: none;
+    }
 }
